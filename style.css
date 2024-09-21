@@ -1,23 +1,68 @@
-.externalBR {
 
-    --borderRadius: 10px;
-    --background-color: salmon;
-    position: relative;
+.details_area {
+
+    background-color: var(--background-color);
+    flex-grow: 1;
+    padding: 15px 30px;
+}
+
+.externalBorderRadiusNavbar li{
+
+    text-decoration: none;
+    list-style: none;
     padding: 15px;
+    cursor: pointer;
+    margin: 25px 0;
+    border-radius: var(--borderRadius) 0 0 var(--borderRadius) ;
+    position: relative;
+
+}
+
+.externalBorderRadiusNavbar li:hover{
 
     background-color: var(--background-color); 
-    border-radius: var(--borderRadius) 0 0 var(--borderRadius) ;
+
+}
+
+.externalBorderRadiusNavbar li.active{
+
+    background-color: var(--background-color); 
     
 }
 
-.externalBR ::before {
+.externalBorderRadiusNavbar li.active::before {
     content: '';
     border-radius: 0 0 100% 0;
     width: calc(var(--borderRadius));
     height: calc(var(--borderRadius));
     position: absolute;
-
     bottom: 100%;
     right: 0;
     box-shadow: 5px 5px 0 5px var(--background-color);
+}
+
+.externalBorderRadiusNavbar li.active::after {
+    content: '';
+    border-radius: 0 100% 0 0;
+    width: calc(var(--borderRadius));
+    height: calc(var(--borderRadius));
+    position: absolute;
+    top: 100%;
+    right: 0;
+    box-shadow: 5px -5px 0 5px var(--background-color);
+}
+
+.nav_area {
+
+    background-color: var(--menu_bg_color);
+
+}
+
+.nav_section {
+    display: flex;
+    border: 1px solid black;
+
+    --borderRadius: 10px;
+    --background-color:salmon;
+    --menu_bg_color :lightpink;
 }
