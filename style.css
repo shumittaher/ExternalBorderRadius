@@ -7,13 +7,13 @@
 }
 
 .externalBorderRadiusNavbar li{
-
+    
     text-decoration: none;
     list-style: none;
     padding: 15px;
     cursor: pointer;
     margin: 25px 0;
-    border-radius: var(--borderRadius) 0 0 var(--borderRadius) ;
+    border-radius: 100vw 0 0 100vw ;
     position: relative;
 
 }
@@ -27,10 +27,12 @@
 .externalBorderRadiusNavbar li.active{
 
     background-color: var(--background-color); 
+    view-transition-name: activeNavTab;
     
 }
 
-.externalBorderRadiusNavbar li.active::before {
+.externalBorderRadiusNavbar li.active::before,
+.externalBorderRadiusNavbar li.active::after {
     content: '';
     border-radius: 0 0 100% 0;
     width: calc(var(--borderRadius));
@@ -42,20 +44,15 @@
 }
 
 .externalBorderRadiusNavbar li.active::after {
-    content: '';
     border-radius: 0 100% 0 0;
-    width: calc(var(--borderRadius));
-    height: calc(var(--borderRadius));
-    position: absolute;
     top: 100%;
-    right: 0;
     box-shadow: 5px -5px 0 5px var(--background-color);
 }
 
 .nav_area {
 
     background-color: var(--menu_bg_color);
-
+    margin-right: -1px
 }
 
 .nav_section {
@@ -65,4 +62,5 @@
     --borderRadius: 10px;
     --background-color:salmon;
     --menu_bg_color :lightpink;
+    
 }

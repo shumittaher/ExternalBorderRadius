@@ -7,6 +7,8 @@ navs_array.forEach(navbar => {
         const clickedOn = event.target
         if (clickedOn.nodeName === 'LI') {
 
+            document.startViewTransition(() => {
+
             const already_actives = navbar.getElementsByClassName('active')
             const already_actives_array = [...already_actives]
             
@@ -16,6 +18,7 @@ navs_array.forEach(navbar => {
 
             clickedOn.classList.add('active')
 
+        })
         }
     })
 });
