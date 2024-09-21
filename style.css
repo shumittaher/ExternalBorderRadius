@@ -31,6 +31,10 @@
     
 }
 
+::view-transition-group(activeNavTab) {
+    animation-duration: .2s;
+}
+
 .externalBorderRadiusNavbar li.active::before,
 .externalBorderRadiusNavbar li.active::after {
     content: '';
